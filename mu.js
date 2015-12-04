@@ -123,7 +123,7 @@ mu.do = function(handle,param){
 		$.get(path,function(data){
 			MU_MODULECACHE[moduleName][methodName](param);
 		}).error(function() {
-			this.view(moduleName);
+			this.open(moduleName);
 		});
 	}else{
 		MU_MODULECACHE[moduleName][methodName](param);
