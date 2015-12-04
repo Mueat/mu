@@ -11,6 +11,15 @@
 <script type="text/javascript">
 	//配置模板文件和JS存放的目录，如下则设置为js文件存放在src目录下，模板文件存放在scr/tpl目录下
 	MU_CONFIG.dir = 'src';
+	/*配置第三方库（可选）*/
+	MU_REQUIRES.select2 = {
+		name:'select2', //库的名字
+		requires:['xxx'], //此JS库的依赖库（可选）
+		files:['css/select2.css','js/select2.js'], //此库的css和Js文件
+		callback:function(){
+			select2.cofig("...") //库加载后的初始化配置（可选）
+		}
+	}
 	//调用js
 	mu.do('user');
 </script>
@@ -53,7 +62,10 @@
     function edit(parm){
 		var userid = parm.id;
 		$.open("user.edit",function(){
-			
+			//如果需要引入第三方库可使用 mu.require方法，第三方库配置为MU_REQUIRES
+			mu.require('select2',function(){
+				//...
+			})
 		},"api/users/"+id);
     }
 
