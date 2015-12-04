@@ -1,3 +1,4 @@
+//模板插件
 ;!function(mu){
 	var _viewData = {}; //模板数据缓存
 
