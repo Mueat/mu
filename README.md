@@ -61,7 +61,7 @@
 		index:index,
 		edit:edit
 	};
-    //mu.module('user',module);
+    mu.module('user',module);
 }(mu)
 ```
 
