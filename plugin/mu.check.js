@@ -1,3 +1,4 @@
+//icheck插件
 ;!function(mu){
 	var config = {
 		name:'check',
