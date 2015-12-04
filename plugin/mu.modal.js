@@ -1,3 +1,4 @@
+//弹出层layer插件
 ;!function(mu){
 	
 	var config = {
